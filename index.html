@@ -3,57 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birth Information Form</title>
+    <title>Dusane Astrology and Palmistry</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
             padding: 20px;
-            max-width: 500px;
-            margin: auto;
+            background-color: #f4f4f4;
         }
         form {
+            max-width: 400px;
+            margin: auto;
             padding: 20px;
-            border: 1px solid #ccc;
+            background: white;
             border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
         }
         label {
             display: block;
             margin-top: 10px;
+            font-weight: bold;
         }
         input, button {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
         }
     </style>
 </head>
 <body>
-    <h2>Birth Information Form</h2>
 
-    <form action="https://formsubmit.co/parthdusane@gmail.com" method="POST" enctype="multipart/form-data">
-        <label>Full Name:</label>
-        <input type="text" name="name" required>
-
-        <label>Date of Birth:</label>
-        <input type="date" name="dob" required>
-
-        <label>Birth Time:</label>
-        <input type="time" name="birth_time" required>
-
-        <label>Birth Place:</label>
-        <input type="text" name="birth_place" required>
-
-        <label>Upload Photos of Your Hands:</label>
-        <input type="file" name="hand_photos" accept="image/*" multiple required>
-
-        <!-- Redirect to a thank you page -->
-        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
-
-        <!-- Optional: Enable CAPTCHA to prevent spam -->
-        <input type="hidden" name="_captcha" value="true">
-
+    <form action="https://formsubmit.co/parthdusane164@gmail.com" method="POST" enctype="multipart/form-data">
+        <h2>Dusane Astrology and Palmistry</h2>
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Enter 10-digit number">
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        
+        <label for="birth_time">Birth Time:</label>
+        <input type="time" id="birth_time" name="birth_time" required>
+        
+        <label for="birth_place">Birth Place:</label>
+        <input type="text" id="birth_place" name="birth_place" required>
+        
+        <label for="hand_photos">Upload Photos of Your Hands:</label>
+        <input type="file" id="hand_photos" name="hand_photos" accept="image/*" multiple required>
+        
         <button type="submit">Submit</button>
     </form>
+
 </body>
 </html>
